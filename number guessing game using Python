@@ -1,0 +1,29 @@
+# -------------------------------
+# Number Guessing Game
+# -------------------------------
+# Player tries to guess a random number
+# Computer gives hints until guessed correctly
+# -------------------------------
+
+import random
+
+def main():
+    # Step 1: Generate random number
+    secret = random.randint(1, 100)
+    
+    # Step 2: Loop until correct guess
+    while True:
+        # Get user input
+        guess = int(input("Enter your guess (1-100): "))
+        
+        # Compare with secret number
+        if guess < secret:
+            print("Too low! Try again.")
+        elif guess > secret:
+            print("Too high! Try again.")
+        else:
+            print("🎉 Correct! You guessed the number.")
+            break
+
+if __name__ == "__main__":
+    main()
